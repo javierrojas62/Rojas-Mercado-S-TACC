@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Título en en navegador -->
+    <title>Mercado Sin Tacc</title>
+    <!-- Link iconos de boostrap -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+    />
+    <!-- Link a css -->
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <!-- Div contenedor -->
+    <div class="wrapper">
+      <aside>
+        <header>
+          <h1 class="logo">Todo sin Tacc</h1>
+        </header>
+        <!-- Navbar -->
+        <nav>
+          <ul class="menu">
+            <li>
+              <button id="todos" class="boton-menu boton-categoria active">
+                <i class="bi bi-arrow-right-square-fill"></i>Todos
+              </button>
+            </li>
+            <li>
+              <button id="bebidas" class="boton-menu boton-categoria">
+                <i class="bi bi-arrow-right-short"></i>Bebidas
+              </button>
+            </li>
+            <li>
+              <button id="caseros" class="boton-menu boton-categoria">
+                <i class="bi bi-arrow-right-short"></i>Caseros
+              </button>
+            </li>
+            <li>
+              <button id="comida" class="boton-menu boton-categoria">
+                <i class="bi bi-arrow-right-short"></i>Comida
+              </button>
+            </li>
+            <!-- Carrito -->
+            <li>
+              <a class="boton-menu boton-carrito" href="./carrito.html"
+                ><i class="bi bi-cart3"></i>Carrito
+                <span id="numerito" class="numerito">0</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <!-- Footer -->
+        <footer>
+          <p class="texto-footer">Soy celiaco no extraterrestre</p>
+        </footer>
+      </aside>
+
+      <!-- Main -->
+      <main>
+        <!-- Mostrar Productos -->
+        <h2 class="titulo-principal" id="titulo-principal">Productos</h2>
+        <div id="contenedor-productos" class="contenedor-productos">
+          <!-- Productos desde JS -->
+        </div>
+      </main>
+    </div>
+
+    <!-- Link a JavaScript -->
+    <script src="./js/main.js"></script>
+  </body>
+</html>
