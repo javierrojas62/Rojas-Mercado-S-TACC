@@ -7,11 +7,14 @@ const contenedorCarritoProductos = document.querySelector("#carrito-productos");
 const contenedorCarritoAcciones = document.querySelector("#carrito-acciones");
 const contenedorCarritoComprado = document.querySelector("#carrito-comprado");
 let botonesEliminar = document.querySelectorAll(".carrito-producto-eliminar");
+const botonVaciar = document.querySelector("#carrito-acciones-vaciar");
+const contenedorTotal = document.querySelector("#total");
+const botonComprar = document.querySelector("#carrito-acciones-comprar");
 
 
 function cargarProductosCarrito() {
 
-    if (productosEnCarrito) {
+    if (productosEnCarrito && productosEnCarrito.length > 0) {
 
         contenedorCarritoVacio.classList.add("disable");
         contenedorCarritoProductos.classList.remove("disabled");
@@ -54,6 +57,7 @@ function cargarProductosCarrito() {
         })
 
         actualizarBotonesEliminar()
+        actualizarTotal();
 
 
     } else {
@@ -87,5 +91,36 @@ function eliminarDelCarrito(e) {
 
     productosEnCarrito.splice(index, 1);
     cargarProductosCarrito();
+
+    localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
+
+}
+
+
+//Boton vaciar carrito
+botonVaciar.addEventListener("click", vaciarCarrito);
+function vaciarCarrito() {
+    productosEnCarrito.length = 0;
+    localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
+    cargarProductosCarrito();
+}
+
+//Actualizar total
+function actualizarTotal() {
+    const totalCalculado = productosEnCarrito.reduce((acc, producto) => acc + (producto.precio * producto.cantidad), 0);
+    total.innerText = `$${totalCalculado}`;
+}
+
+//Boton comprar
+botonComprar.addEventListener("click", comprarCarrito);
+function comprarCarrito() {
+
+    productosEnCarrito.length = 0;
+    localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
+    
+    contenedorCarritoVacio.classList.add("disabled");
+    contenedorCarritoProductos.classList.add("disabled");
+    contenedorCarritoAcciones.classList.add("disabled");
+    contenedorCarritoComprado.classList.remove("disabled");
 
 }
