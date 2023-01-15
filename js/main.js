@@ -209,18 +209,17 @@ function actualizarBotonesAgregar() {
 
 //Verificar si tiene productos el carrito
 let productosEnCarrito;
+
+
 const productosEnCarritoLS = JSON.parse(localStorage.getItem("productos-en-carrito"));
+
+
 if (productosEnCarritoLS) {
-    productosEnCarrito = productosEnCarritoLS
+    productosEnCarrito = productosEnCarritoLS;
+    actualizarNumerito();
 } else {
     productosEnCarrito = [];
 }
-
-
-
-
-
-
 
 //Agregar al array del carrito
 function agregarAlCarrito(e) {
