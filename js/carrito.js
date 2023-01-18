@@ -11,7 +11,7 @@ const botonComprar = document.querySelector("#carrito-acciones-comprar");
 function cargarProductosCarrito() {
 
     if (productosEnCarrito) {
-        
+
         contenedorCarritoProductos.innerHTML = "";
 
         //mostrar productos
@@ -38,26 +38,17 @@ function cargarProductosCarrito() {
             <small>Subtotal</small>
             <p>$${producto.precio * producto.cantidad}</p>
         </div>
-
         <button class="carrito-producto-eliminar" id="${producto.id}"><i class="bi bi-trash"></i></button>
-        
         `;
-
             contenedorCarritoProductos.append(div)
-
         })
 
         actualizarBotonesEliminar()
         actualizarTotal();
 
-
     } else {
-
-       
-        contenedorCarritoProductos.classList.add("disabled");        
-
+        contenedorCarritoProductos.classList.add("disabled");
     }
-
 
 }
 
@@ -75,6 +66,22 @@ function actualizarBotonesEliminar() {
 }
 
 function eliminarDelCarrito(e) {
+
+    Toastify({
+        text: "Producto Eliminado",
+        duration: 3000,
+        destination: "https://github.com/apvarun/toastify-js",
+        newWindow: true,
+        close: true,
+        gravity: "top", // `top` or `bottom`
+        position: "center", // `left`, `center` or `right`
+        stopOnFocus: true, // Prevents dismissing of toast on hover
+        style: {
+          background: "linear-gradient(to right, #159957, #155799)",
+        },
+        onClick: function(){} // Callback after click
+      }).showToast();
+
     const idBoton = e.currentTarget.id;
     const index = productosEnCarrito.findIndex(producto => producto.id === idBoton);
 
@@ -89,6 +96,23 @@ function eliminarDelCarrito(e) {
 //Boton vaciar carrito
 botonVaciar.addEventListener("click", vaciarCarrito);
 function vaciarCarrito() {
+
+    Toastify({
+        text: "Vacio su Carrito",
+        duration: 3000,
+        destination: "https://github.com/apvarun/toastify-js",
+        newWindow: true,
+        close: true,
+        gravity: "top", // `top` or `bottom`
+        position: "left", // `left`, `center` or `right`
+        stopOnFocus: true, // Prevents dismissing of toast on hover
+        style: {
+          background: "linear-gradient(to right, #CB356B, #BD3F32)",
+        },
+        onClick: function(){} // Callback after click
+      }).showToast();
+
+
     productosEnCarrito.length = 0;
     localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
     cargarProductosCarrito();
@@ -100,7 +124,7 @@ function actualizarTotal() {
     total.innerText = `$${totalCalculado}`;
 }
 
-//Boton comprar
+//Boton comprar REVISARRRRRRRRRRRRRRR
 botonComprar.addEventListener("click", comprarCarrito);
 function comprarCarrito() {
 

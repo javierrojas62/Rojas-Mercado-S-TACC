@@ -142,6 +142,10 @@ const tituloPrincipal = document.querySelector(".titulo-principal");
 let botonesAgregar = document.querySelectorAll(".producto-agregar");
 const numerito = document.querySelector("#numerito")
 
+
+
+
+
 // Pintar en el DOM
 function cargarProductos(productosElegidos) {
 
@@ -157,8 +161,9 @@ function cargarProductos(productosElegidos) {
                     <div class="producto-detalles">
                         <h3 class="producto-titulo">${producto.titulo}</h3>
                         <p class="producto-precio">$${producto.precio}</p>
-                        <button class="producto-agregar" id="${producto.id}" >Agregar</button>
+                        <button class="producto-agregar" id="${producto.id}" >AGREGAR</button>
                     </div>
+                   
     `;
 
             contenedorProductos.appendChild(div);
@@ -198,10 +203,10 @@ botonesCategorias.forEach(boton => {
     })
 })
 
-//función boton agregar
+//Boton agregar
 function actualizarBotonesAgregar() {
     botonesAgregar = document.querySelectorAll(".producto-agregar");
-
+    
     botonesAgregar.forEach(boton => {
         boton.addEventListener("click", agregarAlCarrito);
     })
@@ -221,6 +226,21 @@ if (productosEnCarritoLS) {
 
 //Agregar al array del carrito
 function agregarAlCarrito(e) {
+
+    Toastify({
+        text: "Producto agregado",
+        duration: 3000,
+        destination: "",
+        newWindow: true,
+        close: true,
+        gravity: "top", // `top` or `bottom`
+        position: "right", // `left`, `center` or `right`
+        stopOnFocus: true, // Prevents dismissing of toast on hover
+        style: {
+          background: "linear-gradient(to right, #00b09b, #96c93d)",
+        },
+        onClick: function(){} // Callback after click
+      }).showToast();
 
     const idBoton = e.currentTarget.id;
     //Metodo de busqueda
