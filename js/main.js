@@ -9,7 +9,7 @@ const productos = [
             nombre: "Bebidas",
             id: "bebidas",
         },
-        precio: 1000
+        precio: 559
     },
 
     {
@@ -20,7 +20,7 @@ const productos = [
             nombre: "Bebidas",
             id: "bebidas",
         },
-        precio: 1000
+        precio: 581
     },
 
     {
@@ -31,7 +31,7 @@ const productos = [
             nombre: "Bebidas",
             id: "bebidas",
         },
-        precio: 1000
+        precio: 2000
     },
 
     {
@@ -42,7 +42,7 @@ const productos = [
             nombre: "Bebidas",
             id: "bebidas",
         },
-        precio: 1000
+        precio: 880
     },
 
     {
@@ -65,7 +65,7 @@ const productos = [
             nombre: "Caseros",
             id: "caseros",
         },
-        precio: 1000
+        precio: 990
     },
 
     {
@@ -76,7 +76,7 @@ const productos = [
             nombre: "Caseros",
             id: "caseros",
         },
-        precio: 1000
+        precio: 655
     },
 
     {
@@ -87,7 +87,7 @@ const productos = [
             nombre: "Caseros",
             id: "caseros",
         },
-        precio: 1000
+        precio: 359
     },
 
     //Comida
@@ -99,7 +99,7 @@ const productos = [
             nombre: "Comida",
             id: "comida",
         },
-        precio: 1000
+        precio: 280
     },
 
     {
@@ -110,7 +110,7 @@ const productos = [
             nombre: "Comida",
             id: "comida",
         },
-        precio: 1000
+        precio: 300
     },
 
     {
@@ -121,7 +121,7 @@ const productos = [
             nombre: "Comida",
             id: "comida",
         },
-        precio: 1000
+        precio: 415
     },
 
     {
@@ -132,7 +132,7 @@ const productos = [
             nombre: "Comida",
             id: "comida",
         },
-        precio: 1000
+        precio: 1500
     },
 ]
 
