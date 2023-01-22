@@ -1,3 +1,4 @@
+//Arrays con productos
 const productos = [
     // Bebidas
     {
@@ -142,9 +143,11 @@ const tituloPrincipal = document.querySelector(".titulo-principal");
 let botonesAgregar = document.querySelectorAll(".producto-agregar");
 const numerito = document.querySelector("#numerito")
 
-
-
-
+//Conectar base JSON
+// const productos = fetch("/data.json")
+// .then((res) => res.json())
+// .then((data) => {console.log(res)});
+// Promise.all([productos]).then((data) => console.log(productos));
 
 // Pintar en el DOM
 function cargarProductos(productosElegidos) {
@@ -176,7 +179,6 @@ function cargarProductos(productosElegidos) {
 //Llamar función
 cargarProductos(productos)
 
-
 botonesCategorias.forEach(boton => {
     boton.addEventListener("click", (e) => {
 
@@ -206,7 +208,7 @@ botonesCategorias.forEach(boton => {
 //Boton agregar
 function actualizarBotonesAgregar() {
     botonesAgregar = document.querySelectorAll(".producto-agregar");
-    
+
     botonesAgregar.forEach(boton => {
         boton.addEventListener("click", agregarAlCarrito);
     })
@@ -237,10 +239,10 @@ function agregarAlCarrito(e) {
         position: "right", // `left`, `center` or `right`
         stopOnFocus: true, // Prevents dismissing of toast on hover
         style: {
-          background: "linear-gradient(to right, #00b09b, #96c93d)",
+            background: "linear-gradient(to right, #00b09b, #96c93d)",
         },
-        onClick: function(){} // Callback after click
-      }).showToast();
+        onClick: function () { } // Callback after click
+    }).showToast();
 
     const idBoton = e.currentTarget.id;
     //Metodo de busqueda

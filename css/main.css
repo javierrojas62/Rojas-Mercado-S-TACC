@@ -18,29 +18,9 @@
     font-family: 'Rubik', sans-serif;
 }
 
-/* Reset margen */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-a input,
-textarea,
-ul {
-    margin: 0;
-    padding: 0;
-}
-
 /* Ul quitar circulo */
 ul {
     list-style-type: none;
-}
-
-/* Quitar subrrayado de los link */
-a {
-    text-decoration: none;
 }
 
 /* Visualizacion web */
@@ -122,8 +102,6 @@ aside {
     background-color: var(--clr-main);
     color: var(--clr-white);
 }
-
-
 
 /* Main */
 main {
@@ -284,7 +262,3 @@ main {
     cursor: pointer;
 }
 
-/* clases disable */
-.disable {
-    display: none;
-}

@@ -1,0 +1,122 @@
+[
+  {
+    "id": "bebida-01",
+    "titulo": "Bebida 01",
+    "imagen": "./img/Bebidas/cervezas/c-gauther.jpg",
+    "categoria": {
+      "nombre": "Bebidas",
+      "id": "bebidas"
+    },
+    "precio": 1000
+  },
+  {
+    "id": "bebida-02",
+    "titulo": "Bebida 02",
+    "imagen": "./img/Bebidas/cervezas/c-straus.jpg",
+    "categoria": {
+      "nombre": "Bebidas",
+      "id": "bebidas"
+    },
+    "precio": 1000
+  },
+  {
+    "id": "bebida-03",
+    "titulo": "Bebida 03",
+    "imagen": "./img/Bebidas/fernet/f-rasante.jpg",
+    "categoria": {
+      "nombre": "Bebidas",
+      "id": "bebidas"
+    },
+    "precio": 1000
+  },
+  {
+    "id": "bebida-04",
+    "titulo": "Bebida 04",
+    "imagen": "./img/Bebidas/sidra/s-pehunia.jpg",
+    "categoria": {
+      "nombre": "Bebidas",
+      "id": "bebidas"
+    },
+    "precio": 1000
+  },
+  {
+    "id": "bebida-05",
+    "titulo": "Bebida 05",
+    "imagen": "./img/Bebidas/vino/v-ananias.jpg",
+    "categoria": {
+      "nombre": "Bebidas",
+      "id": "bebidas"
+    },
+    "precio": 1000
+  },
+  {
+    "id": "caseros-01",
+    "titulo": "Caseros 01",
+    "imagen": "./img/Caseros/bizcochuelo.jpg",
+    "categoria": {
+      "nombre": "Caseros",
+      "id": "caseros"
+    },
+    "precio": 1000
+  },
+  {
+    "id": "caseros-02",
+    "titulo": "Caseros 02",
+    "imagen": "./img/Caseros/galletas.jpg",
+    "categoria": {
+      "nombre": "Caseros",
+      "id": "caseros"
+    },
+    "precio": 1000
+  },
+  {
+    "id": "caseros-03",
+    "titulo": "Caseros 03",
+    "imagen": "./img/Caseros/pizza.jpg",
+    "categoria": {
+      "nombre": "Caseros",
+      "id": "caseros"
+    },
+    "precio": 1000
+  },
+  {
+    "id": "comida-01",
+    "titulo": "Comida 01",
+    "imagen": "./img/Comida/arroz.jpg",
+    "categoria": {
+      "nombre": "Comida",
+      "id": "comida"
+    },
+    "precio": 1000
+  },
+  {
+    "id": "comida 02",
+    "titulo": "Comida-02",
+    "imagen": "./img/Comida/cereal-havana.jpg",
+    "categoria": {
+      "nombre": "Comida",
+      "id": "comida"
+    },
+    "precio": 1000
+  },
+  {
+    "id": "comida-03",
+    "titulo": "Comida 03",
+    "imagen": "./img/Comida/chocolate.jpg",
+    "categoria": {
+      "nombre": "Comida",
+      "id": "comida"
+    },
+    "precio": 1000
+  },
+  {
+    "id": "comida-04",
+    "titulo": "Comida 04",
+    "imagen": "./img/Comida/empanadas.jpg",
+    "categoria": {
+      "nombre": "Comida",
+      "id": "comida"
+    },
+    "precio": 1000
+  }
+]
